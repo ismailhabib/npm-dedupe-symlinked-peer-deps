@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 "use strict";
 var shelljs_1 = require("shelljs");
 var helpers_1 = require("./helpers");

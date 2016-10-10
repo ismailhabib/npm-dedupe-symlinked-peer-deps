@@ -2,7 +2,7 @@
 tmp/
 node_modules/
 /.buildifchanged
-/bin/
+bin/
 /.baseDir.*
 /.npmrc
 /.cache

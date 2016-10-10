@@ -7,13 +7,13 @@ import {join} from "path";
 import {Set} from "immutable";
 
 export let dedupeSymlinkedPeerDeps = (options?: Options | null | undefined) => {
-    let blackListedPackages = Set<string>();
+    let excludedPackages = Set<string>();
 
     if (options && options.excludes) {
-        blackListedPackages = blackListedPackages.merge(options.excludes);
+        excludedPackages = excludedPackages.merge(options.excludes);
     }
 
-    console.log("Blacklist: ", blackListedPackages);
+    console.log("Blacklist: ", excludedPackages);
 
     const symLinkedPackagesPath = getSymLinkedPackagesPath(".");
     console.log("SymLinked packages: ", symLinkedPackagesPath);
@@ -24,7 +24,7 @@ export let dedupeSymlinkedPeerDeps = (options?: Options | null | undefined) => {
     const requiredPackagesName = getRequiredPackagesName(requirements);
     console.log("Required packages: ", requiredPackagesName);
 
-    requiredPackagesName.filter((packageName) => !blackListedPackages.includes(packageName)).forEach(packageName => {
+    requiredPackagesName.filter((packageName) => !excludedPackages.includes(packageName)).forEach(packageName => {
         const path = join(nodeModulesRelPath, packageName);
         console.log("---------------------");
         console.log("npm link on " + path);
@@ -34,7 +34,7 @@ export let dedupeSymlinkedPeerDeps = (options?: Options | null | undefined) => {
 
     requirements.entrySeq().forEach(([path, peerDependencies]) => {
         peerDependencies.entrySeq().filter(([packageName, version]: [string, string]) => {
-            return !blackListedPackages.includes(packageName);
+            return !excludedPackages.includes(packageName);
         }).forEach(([packageName, version]: [string, string]) => {
             console.log("---------------------");
             console.log("npm link " + packageName + " on " + path);

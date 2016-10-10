@@ -1,6 +1,6 @@
 {
   "name": "@mendix/npm-dedupe-symlinked-peer-deps",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Deduplicate the (peer) dependencies of symlinked packages",
   "main": "bin/index.js",
   "scripts": {

@@ -1,0 +1,19 @@
+{
+  "version": "2.0.3",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "types": ["node"],
+    "declaration": false,
+    "removeComments": true,
+    "sourceMap": false,
+    "outDir": "bin",
+    "allowJs": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node"
+  },
+  "files": [
+    "index.ts"
+  ]
+}

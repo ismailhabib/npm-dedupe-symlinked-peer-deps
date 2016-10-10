@@ -1,0 +1,30 @@
+{
+  "name": "npm-dedupe-symlinked-peer-deps",
+  "version": "0.0.1",
+  "description": "Deduplicate the (peer) dependencies of symlinked packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-build": "rm -rf bin && tsc && chmod +x bin/index.js",
+    "build": "tsc"
+  },
+  "bin": {
+    "npm-dedupe-symlinked-peer-deps": "bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "lodash": "^4.16.4",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/immutable": "^3.8.4",
+    "@types/lodash": "^4.14.37",
+    "@types/minimist": "^1.1.29",
+    "@types/node": "^6.0.45",
+    "@types/shelljs": "^0.3.32",
+    "typescript": "^2.0.3"
+  }
+}

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import {exec} from "shelljs";
 import {
     getRequirements,

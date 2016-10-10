@@ -1,8 +1,8 @@
 {
   "name": "@mendix/npm-dedupe-symlinked-peer-deps",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Deduplicate the (peer) dependencies of symlinked packages",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean-build": "rm -rf bin && tsc && chmod +x bin/index.js",
@@ -11,7 +11,7 @@
   "bin": {
     "npm-dedupe-symlinked-peer-deps": "bin/index.js"
   },
-  "author": "",
+  "author": "Mendix",
   "license": "ISC",
   "dependencies": {
     "immutable": "^3.8.1",

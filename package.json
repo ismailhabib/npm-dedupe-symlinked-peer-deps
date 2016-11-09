@@ -1,5 +1,5 @@
 {
-  "name": "@mendix/npm-dedupe-symlinked-peer-deps",
+  "name": "npm-dedupe-symlinked-peer-deps",
   "version": "0.1.0",
   "description": "Deduplicate the (peer) dependencies of symlinked packages",
   "main": "bin/index.js",
@@ -11,8 +11,8 @@
   "bin": {
     "npm-dedupe-symlinked-peer-deps": "bin/index.js"
   },
-  "author": "Mendix",
-  "license": "ISC",
+  "author": "habsky@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "immutable": "^3.8.1",
     "lodash": "^4.16.4",
